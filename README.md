@@ -28,4 +28,4 @@ As we know this formula for 3 equations (with 3 initial points) we can adquire t
 Is this image there is an example of how with the points: $(0,0), (0,4), (3,2)$ it is possible to set the dot $(2,1)$.
 
 ```markdown
-![](finding one point with 3 circunferences.png)
+![](find_point.png)
