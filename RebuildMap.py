@@ -1,7 +1,7 @@
 import matplotlib.pyplot as plt
 import random
 
-def RebuildPoints(matrix = None, n_points = 1000, maintain_orientation = False, show = False, deviation = False):
+def RebuildPoints(matrix = None, n_points = 10, maintain_orientation = False, show = False):
     
     gen_tpl = set()
     if matrix is None:
@@ -73,7 +73,7 @@ def RebuildPoints(matrix = None, n_points = 1000, maintain_orientation = False, 
 
             plt.figure(figsize=(8, 6))
             plt.scatter(x_coords, y_coords, marker='o', color='red')
-            plt.title("Gráfica de Puntos Reconstruidos")
+            plt.title("Reconstructed points")
 
         plt.grid(True)
         plt.show()
