@@ -1,8 +1,13 @@
 """
 Josep Peiró Ramos
+https://github.com/JosepPeiro/Rebuild-Mapping-with-Distances
 
+UseExample.py
+This file is part of RebuildMap.py
 This is an example of how to use the RebuildMap algorithm.
 The algorithm is designed to reconstruct a set of points in a 2D space based on a distance matrix.
+
+For more information, please refer to the README.md file in the repository or RebuildMap.py file.
 """
 
 from RebuildMap import RebuildPoints, GenerateMatrix, WriteMatrix, ReadMatrix
@@ -41,7 +46,7 @@ p, m, d, l  = RebuildPoints(show=True, maintain_orientation=True, n_points=1000)
 # The matrix should be a sqare matrix or at least superior triangular matrix.
 # There are examples of how the structure of the matrix should be in the EXAMPLES folder.
 # Although we are still creating a random matrix with GenerateMatrix function.
-p, m, d  = RebuildPoints(show=True, matrix=GenerateMatrix(1000))
+p, m, d, _  = RebuildPoints(show=True, matrix=GenerateMatrix(1000))
 # In this case, the parameters "maintain_orientation" and "n_points" are not used, since we are giving a matrix to the algorithm.
 
 # We can storage the matrix in a file, so we can use it later.
@@ -50,5 +55,5 @@ WriteMatrix(m, filewrite)
 
 # And we can read the matrix from a file, so we can use it later.
 matrix_read = ReadMatrix(filewrite)
-p, m, d  = RebuildPoints(show=True, matrix=matrix_read)
+p, m, d, _  = RebuildPoints(show=True, matrix=matrix_read)
 # The result is identical as before, since they are the same distance matrix.
